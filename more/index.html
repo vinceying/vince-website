@@ -1,0 +1,859 @@
+<!DOCTYPE html>
+<html lang="zh-Hans-CN">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>Vince's Space</title>
+    <link href="https://cdn.vince.pub/css/index_css" rel="stylesheet" type="text/css">
+    <style rel="stylesheet" type="text/css">
+        /* css reset */
+        
+        html {
+            color: #000;
+            background: transparent;
+        }
+        
+        body,
+        div,
+        dl,
+        dt,
+        dd,
+        ul,
+        ol,
+        li,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6,
+        pre,
+        code,
+        form,
+        fieldset,
+        legend,
+        input,
+        textarea,
+        p,
+        blockquote,
+        th,
+        td {
+            margin: 0;
+            padding: 0
+        }
+        
+        table {
+            border-collapse: collapse;
+            border-spacing: 0
+        }
+        
+        fieldset,
+        img {
+            border: 0
+        }
+        
+        address,
+        caption,
+        cite,
+        code,
+        dfn,
+        em,
+        strong,
+        th,
+        var {
+            font-style: normal;
+            font-weight: normal
+        }
+        
+        li {
+            list-style: none
+        }
+        
+        caption,
+        th {
+            text-align: left
+        }
+        
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-size: 100%;
+            font-weight: normal
+        }
+        
+        q:before,
+        q:after {
+            content: ''
+        }
+        
+        abbr,
+        acronym {
+            border: 0;
+            font-variant: normal
+        }
+        
+        sup {
+            vertical-align: text-top
+        }
+        
+        sub {
+            vertical-align: text-bottom
+        }
+        
+        input,
+        textarea,
+        select {
+            font-family: inherit;
+            font-size: inherit;
+            font-weight: inherit
+        }
+        
+        input,
+        textarea,
+        select {
+            *font-size: 100%
+        }
+        
+        legend {
+            color: #000
+        }
+        /*stylesheet here*/
+        
+        body {
+            background-color: #FDFFFD;
+        }
+        
+        #header {
+            width: 75%;
+            margin: 0 auto;
+        }
+        
+        #headlinks {
+            float: right;
+            margin-right: 10px;
+            padding: 10px 0;
+        }
+        
+        #headlinks li {
+            float: left;
+            margin-left: 25px;
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+            font-size: 16px;
+            color: #EEECDF;
+        }
+        
+        #headlinks li:hover {
+            color: #FFF;
+        }
+        
+        #headlinks li a {
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+            font-size: 16px;
+            color: #EEECDF;
+            text-decoration: none;
+        }
+        
+        #headlinks li a:hover {
+            color: #FFF;
+        }
+        
+        #welcome {
+            /*width: 100%;*/
+            padding: 40px 15px 40px 0px;
+            background: #40bd97;
+            /* Old browsers */
+            background: -moz-linear-gradient(top, #40bd97 0%, #07a878 100%);
+            /* FF3.6+ */
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(0%, #40bd97), color-stop(100%, #07a878));
+            /* Chrome,Safari4+ */
+            background: -webkit-linear-gradient(top, #40bd97 0%, #07a878 100%);
+            /* Chrome10+,Safari5.1+ */
+            background: -o-linear-gradient(top, #40bd97 0%, #07a878 100%);
+            /* Opera 11.10+ */
+            background: -ms-linear-gradient(top, #40bd97 0%, #07a878 100%);
+            /* IE10+ */
+            background: linear-gradient(to bottom, #40bd97 0%, #07a878 100%);
+            /* W3C */
+        }
+        
+        #intro {
+            margin: 0 auto;
+            width: 75%;
+            color: #F1F1F1;
+        }
+        
+        #intro h1 {
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+            font-weight: 400;
+            font-size: 48px;
+            margin-top: 10px;
+            color: #FFF;
+        }
+        
+        #intro h2 {
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+            font-weight: 300;
+            font-size: 24px;
+            margin-top: 10px;
+            margin-bottom: 10px;
+        }
+        
+        #intro p {
+            margin-bottom: 0px;
+            line-height: 1.3em;
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+            font-weight: 300;
+            font-size: 18px;
+        }
+        
+        #wrapper {
+            width: 75%;
+            margin: 25px auto;
+        }
+        
+        #filelist h3 {
+            color: #07A878;
+            font-family: "Open Sans", "Ubuntu", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "STXihei", "ST Heiti", "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-weight: 100;
+            font-size: 24px;
+            margin: 5px 0 5px 0;
+        }
+        
+        #filelist table {
+            width: 100%;
+            empty-cells: hide;
+        }
+        
+        th {
+            font-weight: normal;
+            text-align: left;
+            font-size: 16px;
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+            padding: 3px 0px;
+        }
+        
+        thead {
+            /*border-bottom:thin dotted #000;*/
+        }
+        
+        #name {
+            text-align: left;
+            padding: 3px 0 3px 3px;
+        }
+        
+        #help {
+            text-align: left;
+            padding: 3px 3px 3px 0;
+        }
+        
+        #filelist td {
+            font-size: 14px;
+            line-height: 20px;
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+        }
+        
+        #filelist td.help {
+            padding: 0px 3px 0px 0px;
+            text-align: left;
+        }
+        
+        #filelist td.filename {
+            padding-left: 3px;
+        }
+        
+        #filelist td a {
+            color: #0B486B;
+            text-decoration: none;
+        }
+        
+        #filelist a:hover {
+            text-decoration: underline;
+        }
+        
+        #revproxy,
+        #revproxy+h3>label>span+span,
+        #revproxy:checked+h3>label>span,
+        #revproxy~div {
+            display: none;
+        }
+        
+        #revproxy:checked+h3>label>span+span {
+            display: inline-block;
+        }
+        
+        #revproxy:checked~div {
+            display: block;
+        }
+        
+        #filename {
+            text-align: left;
+            width: 15%;
+        }
+        
+        .filesize {
+            display: none;
+            text-align: right;
+            width: 0%;
+        }
+        
+        .filetime {
+            text-align: left;
+            width: 35%;
+        }
+        
+        .help {
+            text-align: left;
+            width: 20px;
+        }
+        
+        tbody tr:hover {
+            background-color: #DDEADD;
+        }
+        
+        #sidebar div {
+            margin-bottom: 25px;
+        }
+        
+        #sidebar h3 {
+            color: #07A878;
+            font-family: "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "STXihei", "ST Heiti", "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-weight: 300;
+            font-size: 24px;
+            margin: 0px 0 15px 0;
+        }
+        
+        #sidebar p,
+        a {
+            line-height: 1.5em;
+            font-family: "Open Sans", "Ubuntu", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "STXihei", "ST Heiti", "WenQuanYi Zen Hei Sharp", sans-serif;
+        }
+        
+        #sidebar a {
+            color: #030303;
+            text-decoration: none;
+        }
+        
+        #sidebar a:hover {
+            text-decoration: underline;
+        }
+        
+        .btn {
+            display: inline-block;
+            background-color: #07A878;
+            margin: 12px auto 12px auto;
+            padding: 3px 20px;
+            line-height: 1.5em;
+            font-family: "Open Sans", "Ubuntu", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "STXihei", "ST Heiti", "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-size: 20px;
+            color: #f3f3f3;
+            text-align: center;
+            -webkit-transition: background 0.3s linear;
+            -moz-transition: background 0.3s linear;
+            -ms-transition: background 0.3s linear;
+            -o-transition: background 0.3s linear;
+            transition: background 0.3s linear;
+            cursor: pointer;
+        }
+        
+        .btn:hover {
+            background-color: #40BD97;
+        }
+        
+        #footer {
+            background-color: #333;
+            color: #bbb;
+            padding: 30px 0;
+        }
+        
+        #footercontent {
+            width: 75%;
+            margin: 0 auto;
+        }
+        
+        #footerleft {
+            font-family: "Open Sans", "Ubuntu", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "STXihei", "ST Heiti", "WenQuanYi Zen Hei Sharp", sans-serif;
+            width: 60%;
+            float: left;
+            font-size: 14px;
+            line-height: 1.5em;
+        }
+        
+        #footerleft a {
+            color: #ccc;
+        }
+        
+        #footerright {
+            width: 33%;
+            float: right;
+            text-align: center;
+        }
+        
+        #footerright p {
+            margin-top: 5px;
+        }
+        
+        .modal {
+            visibility: hidden;
+            position: fixed;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            z-index: 5;
+        }
+        
+        .modalclear {
+            width: 100%;
+            background-color: rgba(255, 255, 255, 0.85);
+            height: 100%;
+            z-index: 6;
+        }
+        
+        .modalcontainer {
+            position: absolute;
+            width: 40%;
+            min-width: 345px;
+            top: 10%;
+            left: 30%;
+            margin: 0 auto;
+            background-color: #FCFCFC;
+            border: 3px solid #ccc;
+            padding: 0px;
+            text-align: left;
+            overflow: hidden;
+            -webkit-box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 128);
+            box-shadow: 0px 0px 6px 3px rgba(128, 128, 128, 128);
+            opacity: 1;
+            z-index: 7;
+        }
+        
+        .modaltitle {
+            font-family: "Open Sans", "Ubuntu", Helvetica, Arial, Geneva, sans-serif;
+            font-weight: 300;
+            font-size: 22px;
+            padding: 8px 20px;
+            background-color: #07A878;
+            color: #FCFCFC;
+        }
+        
+        .modalcontent {
+            font-family: "Open Sans", "Ubuntu", "Hiragino Sans GB", "Wenquanyi Micro Hei", "WenQuanYi Micro Hei Mono", "WenQuanYi Zen Hei", "WenQuanYi Zen Hei", "Apple LiGothic Medium", "STXihei", "ST Heiti", "WenQuanYi Zen Hei Sharp", sans-serif;
+            font-size: 22px;
+            padding: 8px 20px;
+            background-color: #FFFFFF;
+            line-height: 1.8em;
+        }
+        
+        .modalcontent p {
+            margin-bottom: 10px;
+        }
+        
+        .modalcontent select {
+            width: 300px;
+        }
+        
+        @media screen and (min-width:881px) {
+            #filelist {
+                float: left;
+                width: 60%;
+                border-right: 1px solid #eee;
+                padding-right: 30px;
+            }
+            #sidebar {
+                float: right;
+                width: 33%;
+            }
+        }
+        
+        @media screen and (max-width:880px) {
+            #filelist {
+                float: left;
+                width: 100%;
+                margin-bottom: 30px;
+            }
+            #sidebar {
+                float: left;
+                max-width: 400px;
+                width: 100%;
+            }
+            #isomodalcontainer {
+                left: 0%;
+                width: 100%;
+                text-align: center;
+                min-width: 0;
+            }
+        }
+        /* when a page is narrower than 540px,
+   regarded as mobile device
+ */
+        
+        @media screen and (max-width:540px) {
+            .update,
+            .filetime,
+            #infinity {
+                display: none;
+            }
+            #intro h2 {
+                font-weight: 500;
+            }
+            #footerleft,
+            #header {
+                width: 100%;
+                float: none;
+            }
+            #footerright {
+                float: none;
+                width: 100%;
+                margin-top: 2em;
+            }
+            #welcome {
+                padding-bottom: 0px;
+            }
+            #search {
+                width: 50%;
+            }
+        }
+        
+        .hidden {
+            display: none;
+        }
+        
+        #filetitle {
+            float: left;
+            line-height: 36px;
+        }
+        
+        #search {
+            float: right;
+            line-height: 18px;
+            padding: 8px;
+            border: 1px solid #e3e3e3;
+            margin-top: 5px;
+            max-width: 240px;
+            font-size: 16px;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="header">
+        <ul id="headlinks">
+            <li><a href="http://www.vince.pub/" target="_blank">Home</a></li>
+            <li><a href="https://i.vince.pub/" target="_blank">Blog</a></li>
+            <li><a href="https://github.com/vinceying/" target="_blank">GitHub</a></li>
+            <li><a href="https://i.vince.pub/about/" target="_blank">About</a></li>
+        </ul>
+    </div>
+    <div id="welcome">
+        <div id="intro">
+            <h1 id="infinity">Another infinity</h1>
+            <h2>Welcome to Vince's Space Homepage.</h2>
+            <p>The first step is as good as half over, Experience is the best teacher.</p>
+            <br>
+        </div>
+    </div>
+    <div id="wrapper">
+        <div id="filelist">
+            <!--FIXME: kind of ugly :(-->
+            <div style="overflow:hidden">
+                <input id="revproxy" type="checkbox">
+                <h3>
+                    <label for="revproxy">
+            使用服务列表
+            <span>+</span><span>-</span>
+            </label>
+                </h3>
+                <div style="overflow-x:auto">
+                    <table>
+                        <tbody>
+                            <tr>
+                                <td><a href="https://github.com/fluid-dev/hexo-theme-fluid" target="_blank" rel="noopener">Fluid</a></td>
+                                <td><a href="https://www.jsdelivr.com" target="_blank" rel="noopener">JSDelivr</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://hitokoto.cn/" target="_blank" rel="noopener">Hitokoto</a></td>
+                                <td><a href="https://valine.js.org/" target="_blank" rel="noopener">Valine</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://hexo.io/" target="_blank" rel="noopener">hexo</a></td>
+                                <td><a href="https://github.com/killia15/ProgressCircle" target="_blank" rel="noopener">ProgressCircle</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/bantikyan/icheck-material/" target="_blank" rel="noopener">Icheck-material</a></td>
+                                <td><a href="https://github.com/mohammad-hammal/bootsrap4-buttons-extended" target="_blank" rel="noopener">bootsrap4-buttons-extended</a></td>
+                            </tr>
+                            <tr>
+                                <td><a href="https://github.com/vinceying/Hexo-Action-TencentCloudBase" target="_blank" rel="noopener">Hexo-Action-TencentCloudBase</a></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div>
+                <h3 id="filetitle">页面列表</h3>
+                <input placeholder="Search" id="search" type="search" autocomplete="off">
+            </div>
+            <table class="filelist">
+                <thead>
+                    <tr id="firstline">
+                        <th id="name">Pages</th>
+                        <th class="update">Last Update(Add Time)</th>
+                        <th id="help">Info</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td class="filename"><a href="https://cdn.vince.pub/blog-file/" target="_blank">blog-file</a></td>
+                        <td class="filetime">2020-05-12 00:33:39</td>
+                        <td class="help">
+                            <a href=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="https://i.vince.pub/archives/" target="_blank">archives</a></td>
+                        <td class="filetime">2020-05-12 00:44:21</td>
+                        <td class="help">
+                            <a href="">Post</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="https://i.vince.pub/wallpaper/" target="_blank">wallpapers</a></td>
+                        <td class="filetime">2020-05-12 00:44:23</td>
+                        <td class="help">
+                            <a href=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="https://file.vince.pub" target="_blank">file-service</a></td>
+                        <td class="filetime">2020-05-12 00:44:23</td>
+                        <td class="help">
+                            <a href="">h5ai</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="http://mail.vince.pub" target="_blank">mail-service</a></td>
+                        <td class="filetime">2020-05-12 00:44:23</td>
+                        <td class="help">
+                            <a href="">alicloud</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="https://cloud.vince.pub" target="_blank">cloud-service</a></td>
+                        <td class="filetime">2020-05-12 00:44:23</td>
+                        <td class="help">
+                            <a href=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="https://onedrive.vince.pub" target="_blank">onedrive-service</a></td>
+                        <td class="filetime">2020-06-02 12:22:13</td>
+                        <td class="help">
+                            <a href="">oneindex</a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="https://onedrive.vince.pub/images" target="_blank">images-service</a></td>
+                        <td class="filetime">2020-06-02 12:22:13</td>
+                        <td class="help">
+                            <a href=""></a>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="filename"><a href="https://i.vince.pub/fluid" target="_blank">fluid-mirrors</a></td>
+                        <td class="filetime">2020-06-02 13:22:13</td>
+                        <td class="help">
+                            <a href="https://github.com/fluid-dev/hexo-theme-fluid/releases">source</a>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div id="sidebar">
+            <div id="servernews">
+                <a href="https://i.vince.pub">
+                    <h3>最新文章</h3>
+                </a>
+
+                <p><a href="https://i.vince.pub/posts/2fc062cb/" target="_blank">多节点部署方案 (2020-05-26)</a></p>
+                <p><a href="https://i.vince.pub/posts/14677127/" target="_blank">Fluid 写作方法 (2020-05-13)</a></p>
+                <p><a href="https://i.vince.pub/posts/14677127/" target="_blank">Action-TencentCloudBase (2020-05-11)</a></p>
+
+            </div>
+            <div id="cdimages">
+                <h3>跳转到相关网页</h3>
+                <p>可以通过页面列表进行跳转,也可以通过以下进行选择：</p>
+                <p></p>
+                <span class="btn" onclick="modal()">获取相关页面 &gt;</span>
+            </div>
+            <div id="mirrorshelp">
+                <h3>关于我</h3>
+                <p>该页面源码来源于 USTC Mirror，如有侵权请联系我，更多关于我请到我的博客查看：</p>
+                <span class="btn" onclick="window.open(&#39;https://i.vince.pub/&#39;)">Blog  &gt;</span>
+                <span></span>
+            </div>
+            <div id="mirrorlinks">
+                <h3>常用链接</h3>
+                <a href="http://mirrors.ustc.edu.cn/" target="_blank">Mirror@USTC</a><br>
+                <a href="https://i.vince.pub/" target="_blank">我的文章 / Post</a><br>
+                <a href="https://i.vince.pub/links" target="_blank">友情链接 / Links</a><br>
+                <a href="https://github.com/vinceying/" target="_blank">软件仓库 / Github Repo</a><br>
+                <a href="mailto:admin@vince.pub">联系我 / Contact Me</a><br>
+                <span></span>
+            </div>
+        </div>
+        <div style="clear: both;"></div>
+    </div>
+    <div id="footer">
+        <div id="footercontent">
+            <div id="footerleft">
+                <p><a href="https://i.vince.pub/">博客</a> | <a href="https://www.vince.pub">主站</a> | <a href="https://i.vince.pub/about">关于</a> | <a href="https://i.vince.pub/comment">留言</a></p>
+                <p>更新：2020/06/02，本页源码来自 <a href="http://mirrors.ustc.edu.cn/">中国科学技术大学镜像站</a> ，如有侵权，请联系删除。</p>
+                <p></p>
+                <p>关于 <a href="https://i.vince.pub/">Vince</a> ，还在路上，希望能够一直热爱一些我所热爱的东西，也希望可以更加自律。同时也在增加自己的版权意识。</p>
+            </div>
+            <div id="footerright">
+                <p><span style="font-family:&#39;Open Sans&#39;,&#39;Seoge UI&#39;,&#39;Ubuntu&#39;,sans-serif; font-size:2em; font-weight:400">INDEX</span><span style="font-family:&#39;Open Sans&#39;,&#39;Seoge UI&#39;,&#39;Ubuntu&#39;,sans-serif; font-size:2em; font-weight:100">@VINCE</span></p>
+                <p style="font-family:&#39;clicker script&#39;,&#39;segoe script&#39;,&#39;Comic Sans MS&#39;; font-size:28px">"life,love,linux"</p>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+    </div>
+    <div class="modal" id="isomodal">
+        <div class="modalclear" id="isomodalclear" onclick="modal()"></div>
+        <div class="modalcontainer" id="isomodalcontainer" onclick="">
+            <div class="modaltitle" id="isomodaltitle"><span>获取相关页面</span><span onclick="modal()" style="float:right;cursor:pointer">X</span></div>
+            <div class="modalcontent" id="isomodalcontent">
+                <p>选择分类： <select id="isodistro" onchange="switchdistro()"><option value="0">Ubuntu</option><option value="1">Ubuntu 衍生版</option><option value="2">Debian</option><option value="3">Debian（含非自由固件）</option><option value="4">Archlinux</option><option value="5">Fedora</option><option value="6">Deepin</option><option value="7">CentOS</option><option value="8">openSUSE</option><option value="9">Linux Mint</option></select></p>
+                <p>选择页面： <select id="isoversion">
+                
+            <option value="0">20.04 (amd64, desktop LiveCD)</option><option value="1">19.10 (amd64, desktop LiveCD)</option><option value="2">18.04.4 (amd64, desktop LiveCD)</option><option value="3">16.04.6 (amd64, desktop LiveCD)</option><option value="4">16.04.6 (i386, desktop LiveCD)</option></select>
+                </p>
+                <span class="btn" onclick="downloadiso();">跳转 &gt;</span>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript">
+        //var isoinfo = "INCLUDE isoinfo.json";
+        var isoinfo = [{
+            "distro": "File",
+            "urls": [{
+                "name": "blog-file",
+                "url": "https://cdn.vince.pub/blog-file/"
+            }, {
+                "name": "file-service",
+                "url": "https://file.vince.pub/"
+            }, {
+                "name": "images-service",
+                "url": "images-service"
+            }, {
+                "name": "fluid-mirrors",
+                "url": "https://i.vice.pub/fluid"
+            }]
+        }, {
+            "distro": "Blog",
+            "urls": [{
+                "name": "blog-index",
+                "url": "https://i.vince.pub/"
+            }, {
+                "name": "blog-note",
+                "url": "https://i.vince.pub/note/"
+            }, {
+                "name": "blog-archives",
+                "url": "https://i.vince.pub/archives/"
+            }, {
+                "name": "blog-links",
+                "url": "https://i.vince.pub/links/"
+            }, {
+                "name": "blog-about",
+                "url": "https://i.vince.pub/about/"
+            }, {
+                "name": "blog-comment",
+                "url": "https://i.vince.pub/comment/"
+            }]
+        }, {
+            "distro": "Cloud",
+            "urls": [{
+                "name": "KED",
+                "url": "https://kde.vince.pub/"
+            }, {
+                "name": "Cloud-drive",
+                "url": "https://cloud.vince.pub/"
+            }, {
+                "name": "Onedrive",
+                "url": "https://onedrive.vince.pub/"
+            }]
+        }];
+
+        function update_isodistro_options() {
+            var s = document.getElementById("isodistro");
+            s.options.length = 0;
+            for (var i = 0; i < isoinfo.length; i++) {
+                s.options[s.options.length] = new Option(isoinfo[i].distro, i);
+            }
+            switchdistro();
+        }
+
+        function modal() {
+            var bx = document.getElementById("isomodal");
+            bx.style.visibility = (bx.style.visibility == "visible") ? "hidden" : "visible";
+        }
+
+        function switchdistro() {
+            var distro = document.getElementById("isodistro");
+            var idx = distro.selectedIndex;
+            var s = document.getElementById('isoversion');
+            s.options.length = 0;
+            for (var i = 0; i < isoinfo[idx].urls.length; i++) {
+                s.options[s.options.length] = new Option(isoinfo[idx].urls[i].name, i)
+            }
+        }
+
+        function downloadiso() {
+            var distro = document.getElementById("isodistro");
+            var version = document.getElementById("isoversion");
+            var i = distro.selectedIndex;
+            var j = version.selectedIndex;
+            var link = isoinfo[i].urls[j].url;
+            window.open(link);
+            modal();
+        }
+
+        update_isodistro_options();
+    </script>
+
+    <script>
+        (function() {
+            'use strict'
+
+            var userInput = document.getElementById('search')
+            var repoList = document.querySelectorAll('.filelist > tbody > tr')
+
+            userInput.addEventListener('input', function(evt) {
+                var pat = new RegExp(userInput.value, 'i')
+                Array.prototype.slice.call(repoList).forEach(function(tr) {
+                    var a = tr.querySelector('a')
+                    if (!pat.test(a.text)) {
+                        tr.classList.add('hidden')
+                    } else {
+                        tr.classList.remove('hidden')
+                    }
+                })
+            })
+
+            document.body.onkeyup = function(evt) {
+                if (evt.keyCode === 83 && document.activeElement.tagName !== 'INPUT') {
+                    userInput.scrollIntoView()
+                    userInput.focus()
+                }
+            }
+        })()
+    </script>
+
+</body>
+
+</html>

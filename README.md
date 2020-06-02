@@ -6,7 +6,14 @@
 
 ### 网站版权
 
-两个 Website 均基于 [HTML5 UP](https://html5up.net/) 两个项目修改而成，协议：CCA 3.0 license (html5up.net/license)。更多页面源码来自中国科学技术大学镜像站 ，如有侵权，请联系删除。
+协议：
+
+CCA 3.0 license (html5up.net/license):
+- Use them for personal stuff
+- Use them for commercial stuff
+- Change them however you like
+
+两个 Website 均基于 [HTML5 UP](https://html5up.net/) 两个项目修改而成。更多页面源码来自中国科学技术大学镜像站 ，如有侵权，请联系删除。
 
 ### 图片版权
 
@@ -14,7 +21,7 @@ Vince's Wallpapers 是用于存放使用于博客主页及相关网站的图片�
 
 ## 相关网站
 
-- [Index Page](https://vince.pub)
-- [More Page](https://vince.pub/more)
+- [Index Page](https://www.vince.pub)
+- [More Page](https://www.vince.pub/more)
 - [Wallpapers Pages](https://i.vince.pub/website/wallpapers)
 

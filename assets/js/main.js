@@ -67,9 +67,9 @@
 
             // Images (in the format of 'url': 'alignment').
             images: {
-                'https://i.vince.pub/website/images/bg01.jpg': 'center',
-                'https://i.vince.pub/website/images/bg02.jpg': 'center',
-                'https://i.vince.pub/website/images/bg03.png': 'center'
+                'https://cdn.vince.pub/images/2.png': 'center',
+                'https://cdn.vince.pub/images/8.png': 'center',
+                'https://cdn.vince.pub/images/7.jpg': 'center'
             },
 
             // Delay.

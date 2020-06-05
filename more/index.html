@@ -5,6 +5,17 @@
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
     <title>Vince's Space</title>
+    <script>
+        ! function() {
+            var devices = ["iPhone", "Android", "Windows Phone"]
+            var ua = window.navigator.userAgent
+            for (var i = 0; i < devices.length; i++) {
+                if (ua.indexOf(devices[i]) != -1) {
+                    window.location.href = './mobile/index.html'
+                }
+            }
+        }()
+    </script>
     <link href="https://cdn.vince.pub/css/index_css" rel="stylesheet" type="text/css">
     <style rel="stylesheet" type="text/css">
         /* css reset */

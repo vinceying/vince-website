@@ -1,5 +1,7 @@
 # 🚀 Vince-Website
 
+🚧 R.I.P.
+
 ![](https://i.vince.pub/blog-file/photo/2020-06-02213425.png)
 
 ## 相关版权
